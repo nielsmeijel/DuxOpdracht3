@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="grid-wrapper-twelve">
+            <div class="card">
+                <!--<div class="title-icon">
+                    <img src="lock.svg" alt="Lock Icon" class="lock-icon">
+                </div>-->
+                <div class="title-subtext-text">
+                    <p class="orbitron-p-1">Use the form below to generate a new password.</p>
+                </div>
+                <div class="title-subtext">
+                    <h1 class="press-start-2p-regular">Password Generator</h1>
+                </div>
+                <hr class="line">
+                <div class="subheader-wrapper">
+                    <h2 class="subheader-text-1">Random string from Character set</h2>
+                </div>
+                <div class="form-input">
+                    <form action="#" id="form">
+                        <div class="form-variable">
+                            <label for="password-length" class="orbitron-labeltext-1">Password Length</label>
+                            <input type="number" id="password-length" name="password-length" min="4" max="40" value="12">
+                        </div>
+                        <div class="form-variable">
+                            <label for="include-uppercase" class="orbitron-labeltext-1">Include Uppercase Letters</label>
+                            <input type="checkbox" id="include-uppercase" name="include-uppercase" checked>
+                        </div>
+                        <div class="form-variable">
+                            <label for="include-numbers" class="orbitron-labeltext-1">Include Numbers</label>
+                            <input type="checkbox" id="include-numbers" name="include-numbers" checked>
+                        </div>
+                        <div class="form-variable">
+                            <label for="include-symbols" class="orbitron-labeltext-1">Include Symbols</label>
+                            <input type="checkbox" id="include-symbols" name="include-symbols" checked>
+                        </div>
+                        <div class="button-box">
+                            <button type="submit" class="btn">
+                                Generate
+                                <img src="key (3).png" alt="Key Icon" class="icon">
+                            </button>
+                        </div>
+                    </form>
+                    
+                </div>
+                <div class="output-col">
+                    
+                    <div class="form-output">
+                        <label for="password" class="orbitron-labeltext-1">Output:</label>
+                    </div>
+                    <div class="form-output-read">
+                        <input type="text" id="password" name="password" readonly>
+                    </div>
+                    <div class="form-output">
+                        <label for="Password Strength" class="orbitron-labeltext-1">Strength:</label>
+                    </div>
+                    <div class="form-output-bar">
+                        <div id="password-strength-bar" class="password-strength-bar"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripty.js"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Press+Start+2P&display=swap');
+@media screen and (max-width: 1024px) {
+    .press-start-2p-regular {
+        font-size: 3rem !important;
+    }
+}
+@media screen and (max-width: 425px) {
+    .press-start-2p-regular {
+        font-size: 1.5rem !important;
+    }
+    .orbitron-p-1 {
+        font-size: 1rem !important;
+    }
+    .orbitron-labeltext-1 {
+        font-size: 0.7rem !important;
+    }
+    .subheader-text-1 {
+        font-size: 0.8rem !important;
+    }
+    .card {
+        grid-column: 2 / span 10 !important;
+    }
+    .title-icon {
+        display: none !important; /* Hide the icon on mobile devices */
+    }
+    .title-subtext {
+        grid-column: 1 / span 8 !important;
+    }
+    .title-subtext-text {
+        grid-column: 1 / span 8 !important;
+    }
+    .form-input {
+        grid-column: 1 / span 8 !important;
+    }
+    .output-col {
+        grid-column: 1 / span 8 !important;
+    }
+}
+
+:root {
+    --pFontColor: rgb(245, 245, 245);
+    --h1FontColor: rgb(169, 197, 47);
+    --labelFontColor: rgb(245, 245, 245);
+    --labelFontColor2: rgb(245, 245, 245);
+    --cardBackgroundColor: rgb(44, 93, 99);
+    --linearGradientStart: rgb(40, 55, 57, 0.99);
+    --linearGradientEnd: rgb(40, 55, 57, 0.75);
+    --btnColor: rgb(245, 245, 245);
+    --btnFontColor: rgb(169, 197, 47);
+    --iconBtnFill: rgb(169, 197, 47);
+    --readInputBackgroundColor: rgba(245, 245, 245, 0);
+    --outputFontColor: rgb(169, 197, 47);
+    --lineColor: rgb(245,245,245);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+}
+form {
+  padding: 10px;
+}
+
+.background {
+  background-color: #000000;
+  background-image: linear-gradient(to bottom right, var(--linearGradientStart),var(--linearGradientEnd)),url("blackBackground.jpg");
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+/* Grid Wrapper */
+.grid-wrapper-twelve {
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+    grid-template-rows: minmax(200px, auto);
+    max-width: 1500px;
+}
+.grid-wrapper-ten {
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin: 0 auto;
+    grid-template-rows: minmax(100px, auto);
+
+}
+
+/* Fonts */
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    color: var(--h1FontColor);
+    letter-spacing: 0.1rem;
+  }
+  
+.orbitron-h1-1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 4rem;
+  color: var(--h1FontColor);
+  letter-spacing: 0.1rem;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+
+
+}
+.orbitron-p-1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-size: 1.0rem;
+  color: var(--pFontColor);
+  letter-spacing: 0.1rem;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+.orbitron-labeltext-1 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+    color: var(--labelFontColor);
+    letter-spacing: 0.1rem;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}
+
+.orbitron-labeltext-2 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    font-optical-sizing: auto;
+    font-size: 2rem;
+    color: var(--labelFontColor2);
+    margin-right: 20px;
+    letter-spacing: 0.1rem;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}
+
+.subheader-text-1 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    margin-left: 10px;
+    font-optical-sizing: auto;
+    font-size: 1.5rem;
+    color: var(--labelFontColor);
+    letter-spacing: 0.1rem;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}
+
+/* Elements */
+
+.card {
+    background-color: var(--cardBackgroundColor);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.998);
+    grid-column: 2 / span 6;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    overflow: hidden;
+    margin-top: 6em;
+    margin-bottom: 10rem;
+    column-gap: 20px;
+    padding: 20px;
+}
+.line {
+    grid-column: 1 / span 7;
+    border-bottom: 1px solid var(--lineColor);
+    margin: 30px 10px;
+}
+
+.title-icon {
+    grid-column: 1 / span 1;
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-icon img {
+    max-width: 80px;
+}
+
+.title-subtext {
+    grid-column: 1 / span 7;
+    display: flex;
+    padding: 10px;
+}
+.title-subtext-text {
+    grid-column: 1 / span 8;
+    padding: 10px 10px;
+}
+.subheader-wrapper {
+    grid-column: 1 / span 8;
+}
+
+.form-input {
+    grid-column: 1 / span 4;
+}
+.output-col {
+    grid-column: 5 / span 4;
+    padding: 10px;
+}
+.form-variable {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.form-variable label {
+    flex: 1;
+}
+.form-variable input {
+    padding: 3px;
+    margin-left: auto;
+    border: none;
+    font-size: 1rem;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-optical-sizing: auto;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}
+.form-output {
+    padding-top: 10px;
+}
+.form-output-read {
+    padding-top: 10px;
+}
+.form-output-read input {
+    width: 100%;
+    height: 40px;
+    background-color: var(--readInputBackgroundColor);
+    border: none;
+    color: var(--outputFontColor);
+    padding: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    
+    font-optical-sizing: auto;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}
+
+.form-output-bar {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.button-box {
+    display: flex;
+    justify-content: end;
+}
+
+.btn {
+    background-color: var(--btnColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    color: var(--btnFontColor);
+    padding: 5px 20px;
+    margin: 10px 0px 40px 0px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-optical-sizing: auto;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}
+.btn .icon {
+    width: 15px; /* Adjust the width of the icon */
+    height: 15px; /* Adjust the height of the icon */
+    margin-left: 15px; /* Adjust the spacing between the icon and text */
+    fill: var(--iconBtnFill); /* Fill the SVG with a CSS variable */
+}
+
+.password-strength-bar {
+    width: 100%;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #dddddd;
+    border-radius: 5px;
+    border-color: #0710ba;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.password-strength-bar-fill {
+    height: 100%;
+    background-color: #4CAF50; /* Green */
+}
+
+.password-strength-weak {
+    background-color: #f44336; /* Red */
+}
+
+.password-strength-medium {
+    background-color: #ff9800; /* Orange */
+}
+
+.password-strength-strong {
+    background-color: #4CAF50; /* Green */
+}
